@@ -1,0 +1,44 @@
+import { Column, Model, PrimaryKey, Table } from 'sequelize-typescript';
+
+@Table({
+  tableName: 'customer',
+  timestamps: false,
+})
+export default class CustomerModel extends Model {
+  @PrimaryKey
+  @Column
+  declare id: string;
+
+  @Column({ allowNull: false })
+  declare name: string;
+
+  @Column({ allowNull: false })
+  declare street: string;
+
+  @Column({ allowNull: false })
+  declare number: number;
+
+  @Column({ allowNull: false })
+  declare city: string;
+
+  @Column({ allowNull: false })
+  declare state: string;
+
+  @Column({ allowNull: false })
+  declare zipcode: string;
+
+  @Column({ allowNull: false })
+  declare country: string;
+
+  @Column({ allowNull: false })
+  declare latitude: number;
+
+  @Column({ allowNull: false })
+  declare longitude: number;
+
+  @Column({ allowNull: false })
+  declare active: boolean;
+
+  @Column({ allowNull: false })
+  declare rewardPoints: number;
+}
